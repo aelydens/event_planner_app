@@ -1,0 +1,9 @@
+<%= form_for [@company, @event] do |f| %>
+<%= f.label :name %>
+<%= f.text_field :name %>
+<%= f.label :capacity %>
+<%= f.number_field :capacity %>
+<%= f.label :date %>
+<%= f.date_field :date %>
+<%= f.submit %>
+<% end %> 

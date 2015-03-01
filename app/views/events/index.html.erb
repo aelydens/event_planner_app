@@ -1,0 +1,15 @@
+<h2>All Events for <%= @company.name %></h2>
+Company Size: <%= @company.size %>
+<br>
+<br>
+<%= link_to "Add a new Event for #{@company.name}", new_company_event_path %>
+<hr>
+
+<% @events.each do |event| %>
+  <ul>
+    <li><%= event.name %></li>
+    <%= link_to "Remove event", company_event_path(@company, @event), method: :delete %>
+  </ul>
+<% end %>
+
+<%= link_to "Back to All Companies", companies_path %>

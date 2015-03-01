@@ -1,0 +1,22 @@
+All Companies
+
+<hr>
+
+<ul>
+  <% @companies.each do |company| %>
+    <li><%= link_to company.name, company_events_path(company) %></li>
+  <% end %>
+</ul>
+
+<%= link_to "Add a new company", new_company_path %>
+<hr>
+
+All Events for All Companies
+
+<hr>
+
+<ul>
+  <% @events.each do |event| %>
+    <li><%= event.name %></li>
+  <% end %>
+</ul>
