@@ -1,3 +1,8 @@
+<% if current_user %>
+
+Welcome,
+<%= current_user.email %>
+<hr>
 All Companies
 
 <hr>
@@ -20,3 +25,10 @@ All Events for All Companies
     <li><%= event.name %></li>
   <% end %>
 </ul>
+
+<% else %>
+<hr>
+
+Please sign up or sign in above.
+
+<% end %>

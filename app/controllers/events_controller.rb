@@ -23,6 +23,12 @@ class EventsController < ApplicationController
     end
   end
 
+  def destroy
+    event = @company.events.find(params[:id])
+    event.destroy
+    redirect_to company_events_path(@company)
+  end
+
   private
 
   def set_company
